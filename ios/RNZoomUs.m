@@ -114,10 +114,11 @@ RCT_EXPORT_METHOD(
       authService.delegate = self;
       if (jwtToken != nil) {
         authService.jwtToken = data[@"jwtToken"];
-      } else {
-        authService.clientKey = data[@"clientKey"];
-        authService.clientSecret = data[@"clientSecret"];
-      }
+      } 
+      // else {
+      //   authService.clientKey = data[@"clientKey"];
+      //   authService.clientSecret = data[@"clientSecret"];
+      // }
 
       [authService sdkAuth];
     } else {
@@ -503,9 +504,9 @@ RCT_EXPORT_METHOD(removeListeners : (NSInteger)count) {
         case MobileRTCMeetingState_Ended: // only iOS (guessed naming)
             result = @"MEETING_STATUS_ENDED";
             break;
-        case MobileRTCMeetingState_Unknow:
-            result = @"MEETING_STATUS_UNKNOWN";
-            break;
+        // case MobileRTCMeetingState_Unknow:
+        //     result = @"MEETING_STATUS_UNKNOWN";
+        //     break;
         case MobileRTCMeetingState_Locked: // only iOS (guessed naming)
             result = @"MEETING_STATUS_LOCKED";
             break;
