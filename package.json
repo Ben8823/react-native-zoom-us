@@ -7,6 +7,7 @@
   "types": "index.d.ts",
   "scripts": {
     "prepack": "npx tsc --noEmit false",
+    "prepare": "npx tsc --noEmit false",
     "postversion": "git push && git push --tags",
     "dev": "npm run prepack && rm -fr ../react-native-zoom-us-test/node_modules/react-native-zoom-us/ && cp -R . ../react-native-zoom-us-test/node_modules/react-native-zoom-us"
   },
